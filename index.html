@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button{
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button{
+    padding: 19px 32px;
+  }
+}
+
+.button:before,
+.button:after {
+  border-radius: 80px;
+}
+
+.button:before {
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button:after {
+  background-color: initial;
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button:hover:not(:disabled):before {
+  background: linear-gradient(92.83deg, rgb(255, 116, 38) 0%, rgb(249, 58, 19) 100%);
+}
+
+.button:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.button:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button:active:not(:disabled):before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.button:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button:disabled {
+  cursor: default;
+  opacity: .24;
+}
+  </style>
+  <head>
+    <title>Top Artists and Songs by Country</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body background style="background-color:pink;">
+    <center> 
+      <p style="border: 3px solid black; border-left-style: none;  border-right-style: none; font-size:50pt;">
+        <font  style="text-shadow: 0 -1px 4px #FFF, 0 -2px 10px rgb(81, 255, 0), 0 -10px 20px #453dbd, 0 -18px 40px #F00; color: #130fe7;">  
+          <u>Top Artists and Songs by Country</u>
+        </font>
+  
+    <marquee direction="right" height="10" scrollamount="10" style="font-size:30px; color: #20b912">
+  
+      GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GDSC
+    </marquee>
+    <marquee direction="up" height="30" scrollamount="2" style="font-size:30px; color: #1215b9">
+  
+      VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VIT
+    </marquee>
+       </p> 
+    </center>
+    <div class="container">
+      <form method="POST" action="/">
+        <div class="form-group">
+          <label for="country-input">Enter County to view it's Top Artists and Songs:</label>
+          <input type="text" class="form-control" id="country-input" name="country" required>
+        </div>
+        <div style="text-align:center">
+        <button slign="center" type="submit" class="button">Get Top Artists and Songs</button>
+        </div>
+      </form>
+      <hr>
+      {% if top_artists and top_tracks %}
+      <h2 style="background-color:DodgerBlue; text-align:center">Top {{ top_artists|length }} Artists:</h2>
+      <ol color="red">
+        {% for artist in top_artists %}
+        <li>{{ artist }}</li>
+        {% endfor %}
+      </ol>
+      <h2 style="background-color:DodgerBlue; text-align:center">Top {{ top_tracks|length }} Tracks:</h2>
+
+      <ol>
+        {% for track in top_tracks %}
+        <li>{{ track }}</li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
